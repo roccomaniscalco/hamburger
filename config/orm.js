@@ -23,11 +23,11 @@ const orm = {
     });
   },
 
-  updateOne: (table, col, value, condition) => {
+  updateOne: (table, col, value, id) => {
     return new Promise((resolve, reject) => {
       connection.query(
-        `update ?? set ?? = ? where ${condition};`,
-        [table, col, value],
+        `update ?? set ?? = ? where id = ?;`,
+        [table, col, value, id],
         (err, res) => {
           if (err) reject(err);
           else resolve(res);
