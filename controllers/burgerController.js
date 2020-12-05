@@ -8,7 +8,7 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/api/burgers", async (req, res) => {
-  const okPacket = await burger.create(req.body.burgerName);
+  const okPacket = await burger.create(req.body.name);
   res.json({ id: okPacket.insertId });
 });
 
