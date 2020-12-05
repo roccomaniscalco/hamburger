@@ -1,16 +1,16 @@
 const orm = require("../config/orm");
 
 const burger = {
-  all: async () => {
-    return await orm.selectAll("burgers");
+  all: () => {
+    return orm.selectAll("burgers");
   },
 
-  create: async (burgerName) => {
-    return await orm.insertOne("burgers", "burger_name", burgerName);
+  create: (burgerName) => {
+    return orm.insertOne("burgers", "burger_name", burgerName);
   },
 
-  updateDevoured: async (value, id) => {
-    return await orm.updateOne("burgers", "devoured", value, `id = ${id}`);
+  updateDevoured: (value, id) => {
+    return orm.updateOne("burgers", "devoured", value, `id = ${id}`);
   },
 };
 

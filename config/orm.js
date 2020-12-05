@@ -3,7 +3,7 @@ const connection = require("./connection");
 const orm = {
   selectAll: (table) => {
     return new Promise((resolve, reject) => {
-      connection.query("select * from ", [table], (err, res) => {
+      connection.query("select * from ??", [table], (err, res) => {
         if (err) reject(err);
         else resolve(res);
       });
