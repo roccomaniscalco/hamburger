@@ -2,7 +2,7 @@ const mysql = require("mysql");
 let connection;
 
 if (process.env.JAWSDB_URL) {
-    connection = process.env.JAWSDB_URL;
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
     connection = mysql.createConnection({
     host: "localhost",
@@ -13,7 +13,7 @@ if (process.env.JAWSDB_URL) {
   });
 }
 
-connection.connect(function (err) {
+connection.connect((err) => {
   if (err) {
     console.error("error connecting: " + err.stack);
     return;
