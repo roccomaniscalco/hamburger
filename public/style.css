@@ -1,0 +1,98 @@
+* {
+  margin: 0%;
+  background-color: #0f0f0f;
+}
+
+h1 {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 50px;
+  background-color: coral;
+  font-size: 5em;
+}
+
+h2 {
+  font-family: sans-serif;
+  margin: 0px 0px 10px 0px;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.dualContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0%;
+  text-align: center;
+}
+
+li {
+  font-family: sans-serif;
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+button {
+  font-size: 20px;
+  font-family: sans-serif;
+  color: whitesmoke;
+  background: transparent;
+  box-shadow: 0px 0px 0px transparent;
+  border: 2px solid coral;
+  border-radius: 10px;
+  text-shadow: 0px 0px 0px transparent;
+}
+
+button:hover {
+  background: transparent;
+  box-shadow: 0px 0px 0px transparent;
+  border: 2px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
+}
+
+button:active {
+  outline: none;
+  border: 2px solid coral;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.form-box {
+  padding: 40px;
+  margin: 20px 0px;
+}
+
+.form-title {
+  color: whitesmoke;
+  text-align: center;
+  margin: 0px 0px 10px 0px;
+  font-size: 3em;
+}
+
+.create-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  background: transparent;
+  box-shadow: 0px 0px 0px transparent;
+  border: 2px solid whitesmoke;
+  text-shadow: 0px 0px 0px transparent;
+  font-size: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: whitesmoke;
+  margin: 0px 20px;
+  padding: 0px 40px;
+}
+
+input:focus {
+  outline: none;
+}

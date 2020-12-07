@@ -1,27 +1,33 @@
 <h1>Hamburgers</h1>
 
-<h2>Uneaten Burgers</h2>
+<div class="form-box">
+    <h2 class="form-title">Add a Burger</h2>
+    <form class="create-form">
+        <input type="text" placeholder="Burger Name" name="name">
+        <button type="submit">Add Burger</button>
+    </form>
+</div>
 
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    {{> burgerCard}}
-    {{/unless}}
-    {{/each}}
-</ul>
+<div class="dualContainer">
+    <div class="burgerBlock">
+        <h2>Uneaten Burgers</h2>
+        <ul>
+            {{#each burgers}}
+            {{#unless devoured}}
+            {{> burgerCard}}
+            {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
 
-<h2>Eaten Burgers</h2>
-
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    {{> burgerCard}}
-    {{/if}}
-    {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-    <input type="text" placeholder="Burger Name" name="name">
-    <button type="submit">Add Burger</button>
-</form>
+    <div class="burgerBlock">
+        <h2>Eaten Burgers</h2>
+        <ul>
+            {{#each burgers}}
+            {{#if devoured}}
+            {{> burgerCard}}
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+</div>
